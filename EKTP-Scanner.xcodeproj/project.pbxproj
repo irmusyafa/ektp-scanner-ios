@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4B5F2335CEAE7A6A7F1655C /* Pods_EKTP_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */; };
+		EC458AEA233236FB00F2FAA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458AE9233236FB00F2FAA4 /* AppDelegate.swift */; };
+		EC458AEC233236FB00F2FAA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458AEB233236FB00F2FAA4 /* ViewController.swift */; };
+		EC458AEF233236FB00F2FAA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC458AED233236FB00F2FAA4 /* Main.storyboard */; };
+		EC458AF2233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */; };
+		EC458AF4233236FC00F2FAA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC458AF3233236FC00F2FAA4 /* Assets.xcassets */; };
+		EC458AF7233236FC00F2FAA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC458AF5233236FC00F2FAA4 /* LaunchScreen.storyboard */; };
+		EC458B02233236FC00F2FAA4 /* EKTP_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B01233236FC00F2FAA4 /* EKTP_ScannerTests.swift */; };
+		EC458B132332382F00F2FAA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC458B122332382F00F2FAA4 /* GoogleService-Info.plist */; };
+		EC458B1723323B0500F2FAA4 /* DatabaseInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B1623323B0500F2FAA4 /* DatabaseInstance.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC458AFE233236FC00F2FAA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC458ADE233236FB00F2FAA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC458AE5233236FB00F2FAA4;
+			remoteInfo = "EKTP-Scanner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKTP_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DE6B4A310F63F53E26C0FA /* Pods-EKTP-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.debug.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		781BBDB074EC23FF050D296C /* Pods-EKTP-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.release.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		EC458AE6233236FB00F2FAA4 /* EKTP-Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EKTP-Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC458AE9233236FB00F2FAA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC458AEB233236FB00F2FAA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC458AEE233236FB00F2FAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC458AF1233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EKTP_Scanner.xcdatamodel; sourceTree = "<group>"; };
+		EC458AF3233236FC00F2FAA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC458AF6233236FC00F2FAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC458AF8233236FC00F2FAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC458AFD233236FC00F2FAA4 /* EKTP-ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EKTP-ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC458B01233236FC00F2FAA4 /* EKTP_ScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKTP_ScannerTests.swift; sourceTree = "<group>"; };
+		EC458B03233236FC00F2FAA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC458B122332382F00F2FAA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC458B1623323B0500F2FAA4 /* DatabaseInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInstance.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC458AE3233236FB00F2FAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4B5F2335CEAE7A6A7F1655C /* Pods_EKTP_Scanner.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC458AFA233236FC00F2FAA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0105E3B33F3EE73EE0CDC3C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09DE6B4A310F63F53E26C0FA /* Pods-EKTP-Scanner.debug.xcconfig */,
+				781BBDB074EC23FF050D296C /* Pods-EKTP-Scanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC24AE89C24596DC78691A1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC458ADD233236FB00F2FAA4 = {
+			isa = PBXGroup;
+			children = (
+				EC458AE8233236FB00F2FAA4 /* EKTP-Scanner */,
+				EC458B00233236FC00F2FAA4 /* EKTP-ScannerTests */,
+				EC458AE7233236FB00F2FAA4 /* Products */,
+				0105E3B33F3EE73EE0CDC3C0 /* Pods */,
+				CC24AE89C24596DC78691A1A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC458AE7233236FB00F2FAA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AE6233236FB00F2FAA4 /* EKTP-Scanner.app */,
+				EC458AFD233236FC00F2FAA4 /* EKTP-ScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC458AE8233236FB00F2FAA4 /* EKTP-Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AE9233236FB00F2FAA4 /* AppDelegate.swift */,
+				EC458B122332382F00F2FAA4 /* GoogleService-Info.plist */,
+				EC458B0D2332377900F2FAA4 /* Database */,
+				EC458B0E2332378200F2FAA4 /* Resources */,
+				EC458B0C2332377300F2FAA4 /* Screen */,
+				EC458B0F2332378D00F2FAA4 /* Utilities */,
+				EC458B10233237E700F2FAA4 /* XIB */,
+			);
+			path = "EKTP-Scanner";
+			sourceTree = "<group>";
+		};
+		EC458B00233236FC00F2FAA4 /* EKTP-ScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC458B01233236FC00F2FAA4 /* EKTP_ScannerTests.swift */,
+				EC458B03233236FC00F2FAA4 /* Info.plist */,
+			);
+			path = "EKTP-ScannerTests";
+			sourceTree = "<group>";
+		};
+		EC458B0C2332377300F2FAA4 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EC458B1923323B8F00F2FAA4 /* CardDetail */,
+				EC458B11233237FC00F2FAA4 /* CardList */,
+				EC458B1823323B8000F2FAA4 /* CardScanner */,
+				EC458B1A23323BA200F2FAA4 /* Home */,
+				EC458B1B23323BAF00F2FAA4 /* Launch */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		EC458B0D2332377900F2FAA4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		EC458B0E2332378200F2FAA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AF8233236FC00F2FAA4 /* Info.plist */,
+				EC458AF3233236FC00F2FAA4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC458B0F2332378D00F2FAA4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EC458B1623323B0500F2FAA4 /* DatabaseInstance.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EC458B10233237E700F2FAA4 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AF5233236FC00F2FAA4 /* LaunchScreen.storyboard */,
+				EC458AED233236FB00F2FAA4 /* Main.storyboard */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		EC458B11233237FC00F2FAA4 /* CardList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardList;
+			sourceTree = "<group>";
+		};
+		EC458B1823323B8000F2FAA4 /* CardScanner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardScanner;
+			sourceTree = "<group>";
+		};
+		EC458B1923323B8F00F2FAA4 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		EC458B1A23323BA200F2FAA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC458AEB233236FB00F2FAA4 /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EC458B1B23323BAF00F2FAA4 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC458AE5233236FB00F2FAA4 /* EKTP-Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC458B06233236FC00F2FAA4 /* Build configuration list for PBXNativeTarget "EKTP-Scanner" */;
+			buildPhases = (
+				901B3A363BD160B83512C71F /* [CP] Check Pods Manifest.lock */,
+				EC458AE2233236FB00F2FAA4 /* Sources */,
+				EC458AE3233236FB00F2FAA4 /* Frameworks */,
+				EC458AE4233236FB00F2FAA4 /* Resources */,
+				F8711C07D2A67EF16D9A5AFF /* [CP] Embed Pods Frameworks */,
+				6FE234C74C3C8F8D09D9D73A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EKTP-Scanner";
+			productName = "EKTP-Scanner";
+			productReference = EC458AE6233236FB00F2FAA4 /* EKTP-Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC458AFC233236FC00F2FAA4 /* EKTP-ScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC458B09233236FC00F2FAA4 /* Build configuration list for PBXNativeTarget "EKTP-ScannerTests" */;
+			buildPhases = (
+				EC458AF9233236FC00F2FAA4 /* Sources */,
+				EC458AFA233236FC00F2FAA4 /* Frameworks */,
+				EC458AFB233236FC00F2FAA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC458AFF233236FC00F2FAA4 /* PBXTargetDependency */,
+			);
+			name = "EKTP-ScannerTests";
+			productName = "EKTP-ScannerTests";
+			productReference = EC458AFD233236FC00F2FAA4 /* EKTP-ScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC458ADE233236FB00F2FAA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Irmusyafa;
+				TargetAttributes = {
+					EC458AE5233236FB00F2FAA4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					EC458AFC233236FC00F2FAA4 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = EC458AE5233236FB00F2FAA4;
+					};
+				};
+			};
+			buildConfigurationList = EC458AE1233236FB00F2FAA4 /* Build configuration list for PBXProject "EKTP-Scanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC458ADD233236FB00F2FAA4;
+			productRefGroup = EC458AE7233236FB00F2FAA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC458AE5233236FB00F2FAA4 /* EKTP-Scanner */,
+				EC458AFC233236FC00F2FAA4 /* EKTP-ScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC458AE4233236FB00F2FAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC458AF7233236FC00F2FAA4 /* LaunchScreen.storyboard in Resources */,
+				EC458B132332382F00F2FAA4 /* GoogleService-Info.plist in Resources */,
+				EC458AF4233236FC00F2FAA4 /* Assets.xcassets in Resources */,
+				EC458AEF233236FB00F2FAA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC458AFB233236FC00F2FAA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FE234C74C3C8F8D09D9D73A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		901B3A363BD160B83512C71F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EKTP-Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8711C07D2A67EF16D9A5AFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC458AE2233236FB00F2FAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC458AEC233236FB00F2FAA4 /* ViewController.swift in Sources */,
+				EC458AF2233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld in Sources */,
+				EC458AEA233236FB00F2FAA4 /* AppDelegate.swift in Sources */,
+				EC458B1723323B0500F2FAA4 /* DatabaseInstance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC458AF9233236FC00F2FAA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC458B02233236FC00F2FAA4 /* EKTP_ScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC458AFF233236FC00F2FAA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC458AE5233236FB00F2FAA4 /* EKTP-Scanner */;
+			targetProxy = EC458AFE233236FC00F2FAA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC458AED233236FB00F2FAA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC458AEE233236FB00F2FAA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC458AF5233236FC00F2FAA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC458AF6233236FC00F2FAA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC458B04233236FC00F2FAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC458B05233236FC00F2FAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC458B07233236FC00F2FAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DE6B4A310F63F53E26C0FA /* Pods-EKTP-Scanner.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H934H94MVK;
+				INFOPLIST_FILE = "EKTP-Scanner/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irmusyafa.ektpscanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EC458B08233236FC00F2FAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781BBDB074EC23FF050D296C /* Pods-EKTP-Scanner.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H934H94MVK;
+				INFOPLIST_FILE = "EKTP-Scanner/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irmusyafa.ektpscanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		EC458B0A233236FC00F2FAA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H934H94MVK;
+				INFOPLIST_FILE = "EKTP-ScannerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.irmusyafa.ektpscanner.EKTP-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EKTP-Scanner.app/EKTP-Scanner";
+			};
+			name = Debug;
+		};
+		EC458B0B233236FC00F2FAA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H934H94MVK;
+				INFOPLIST_FILE = "EKTP-ScannerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.irmusyafa.ektpscanner.EKTP-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EKTP-Scanner.app/EKTP-Scanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC458AE1233236FB00F2FAA4 /* Build configuration list for PBXProject "EKTP-Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC458B04233236FC00F2FAA4 /* Debug */,
+				EC458B05233236FC00F2FAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC458B06233236FC00F2FAA4 /* Build configuration list for PBXNativeTarget "EKTP-Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC458B07233236FC00F2FAA4 /* Debug */,
+				EC458B08233236FC00F2FAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC458B09233236FC00F2FAA4 /* Build configuration list for PBXNativeTarget "EKTP-ScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC458B0A233236FC00F2FAA4 /* Debug */,
+				EC458B0B233236FC00F2FAA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EC458AF1233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodel */,
+			);
+			currentVersion = EC458AF1233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodel */;
+			path = EKTP_Scanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EC458ADE233236FB00F2FAA4 /* Project object */;
+}
