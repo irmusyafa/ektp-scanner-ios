@@ -17,6 +17,7 @@ class IdentityModel: NSObject {
     var expiredDate: String?
     var faceImage: UIImage?
     var gender: String?
+    var job: String?
     var idNumber: String?
     var nationality: String?
     var maritalStatus: String?
@@ -35,6 +36,7 @@ extension IdentityModel {
         district = data[Constants.district]
         expiredDate = data[Constants.expiredDate]
         gender = data[Constants.gender]
+        job = data[Constants.job]
         idNumber = data[Constants.idNumber]
         nationality = data[Constants.nationality]
         maritalStatus = data[Constants.maritalStatus]

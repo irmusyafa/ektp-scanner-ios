@@ -16,6 +16,7 @@ struct Constants {
     static let district = "kecamatan"
     static let expiredDate = "berlaku hingga"
     static let gender = "jenis kelamin"
+    static let job = "pekerjaan"
     static let idNumber = "nik"
     static let nationality = "kewarganegaraan"
     static let maritalStatus = "status perkawinan"

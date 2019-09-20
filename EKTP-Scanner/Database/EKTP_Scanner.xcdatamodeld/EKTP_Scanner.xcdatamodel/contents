@@ -13,6 +13,7 @@
         <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="job" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="maritalStatus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nationality" optional="YES" attributeType="String" syncable="YES"/>
@@ -21,6 +22,6 @@
         <attribute name="village" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CardEntity" positionX="-63" positionY="-18" width="128" height="315"/>
+        <element name="CardEntity" positionX="-63" positionY="-18" width="128" height="330"/>
     </elements>
 </model>

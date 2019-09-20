@@ -56,6 +56,7 @@ class CardViewModel: NSObject {
         extractedItems.append(cardModel.identity?.province)
         extractedItems.append(cardModel.identity?.religion)
         extractedItems.append(cardModel.identity?.maritalStatus)
+        extractedItems.append(cardModel.identity?.job)
         extractedItems.append(cardModel.identity?.nationality)
         extractedItems.append(cardModel.identity?.expiredDate)
         return extractedItems
@@ -73,6 +74,7 @@ class CardViewModel: NSObject {
             Constants.province,
             Constants.religion,
             Constants.maritalStatus,
+            Constants.job,
             Constants.nationality,
             Constants.expiredDate
         ]

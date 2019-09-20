@@ -22,6 +22,7 @@ class CardManagedObject: NSManagedObject {
     @NSManaged public var expiredDate: String?
     @NSManaged public var faceImage: Data?
     @NSManaged public var gender: String?
+    @NSManaged public var job: String?
     @NSManaged public var idNumber: String?
     @NSManaged public var nationality: String?
     @NSManaged public var maritalStatus: String?
@@ -42,6 +43,7 @@ extension CardManagedObject {
         identity.expiredDate = self.expiredDate
         if let img = self.faceImage { identity.faceImage = UIImage(data: img) }
         identity.gender = self.gender
+        identity.job = self.job
         identity.idNumber = self.idNumber
         identity.nationality = self.nationality
         identity.maritalStatus = self.maritalStatus
@@ -69,6 +71,7 @@ extension CardManagedObject {
         self.expiredDate = identity.expiredDate
         self.faceImage = image.pngData()
         self.gender = identity.gender
+        self.job = identity.job
         self.idNumber = identity.idNumber
         self.nationality = identity.nationality
         self.maritalStatus = identity.maritalStatus
