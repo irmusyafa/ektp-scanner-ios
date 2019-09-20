@@ -31,10 +31,9 @@ class CardScannerViewController: UIViewController {
     private let faceDetection = FaceDetectionUtility()
     private let ocrUtility = OCRUtility()
     
-    
     //Capture result
     private var capturedImage: UIImage!
-    private var capturedFace: UIImage!
+    private var capturedFace = UIImage()
     private var extractedTextError: Error? {
         didSet {
             self.performSegue(withIdentifier: "showError", sender: self)
@@ -42,7 +41,7 @@ class CardScannerViewController: UIViewController {
     }
     private var extractedTextBlocks: [String]? {
         didSet {
-//            if debugMode { print("extracted blocks: \(extractedTextBlocks!)") }
+            if debugMode { print("extracted blocks: \(extractedTextBlocks!)") }
             self.performSegue(withIdentifier: "showInfo", sender: self)
         }
     }
@@ -134,11 +133,11 @@ class CardScannerViewController: UIViewController {
     private func initiateStatement() {
         let statementPoints = getStatementArea()
         let statementTitle = StatementLabel(frame: statementPoints.0)
-        statementTitle.shape("Add ID Card.", font: UIFont.boldSystemFont(ofSize: 20))
+        statementTitle.shape("Tampilkan EKTP", font: UIFont.boldSystemFont(ofSize: 20))
         view.addSubview(statementTitle)
         
         let statementSubtitle = StatementLabel(frame: statementPoints.1)
-        statementSubtitle.shape("Position your ID Card within the frame.", font: UIFont.systemFont(ofSize: 17))
+        statementSubtitle.shape("Posisikan EKTP anda ke dalam frame", font: UIFont.systemFont(ofSize: 17))
         view.addSubview(statementSubtitle)
     }
     
@@ -248,8 +247,11 @@ extension CardScannerViewController: AVCaptureVideoDataOutputSampleBufferDelegat
 
 extension CardScannerViewController: CardDetectionUtilityDelegate {
     func didDetectCardImage(_ image: CIImage, at rect: CGRect) {
-        self.scannedImageIsInAcceptanceArea(rect) ? self.faceDetection.detect(image) : self.updateScanArea(false)
+        guard self.scannedImageIsInAcceptanceArea(rect) else { return }
+
+        self.faceDetection.detect(image)
         self.capturedImage = self.getUIImage(from: image)
+        self.updateScanArea(true)
         
         if debugMode { self.imgView.image =  self.capturedImage }
     }

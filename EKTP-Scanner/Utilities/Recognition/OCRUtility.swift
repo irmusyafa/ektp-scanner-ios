@@ -13,15 +13,16 @@ import FirebaseMLVision
 typealias textDetectionCompletion = ((_ error: Error?, _ blocks: [String]?) -> Void)
 
 class OCRUtility: NSObject {
-    lazy var vision = Vision.vision()
-    var textRecognizer: VisionTextRecognizer!
-    let metadata = VisionImageMetadata()
-    
+    private lazy var vision = Vision.vision()
+    private var textRecognizer: VisionTextRecognizer!
+    private let metadata = VisionImageMetadata()
+    private let tolerance: CGFloat = 5
+
     override init() {
         super.init()
     }
     
-    func detectText (image: UIImage, _ completion: @escaping textDetectionCompletion) {
+    func detectText(image: UIImage, _ completion: @escaping textDetectionCompletion) {
         textRecognizer = vision.onDeviceTextRecognizer()
         let visionImage = VisionImage(image: image)
         
@@ -50,18 +51,18 @@ class OCRUtility: NSObject {
         
         var lineUsed : [VisionTextLine] = []
         for line in lines {
-            var linesSomeYPosition : [VisionTextLine] = []
+            var linesSomeVerticalPosition : [VisionTextLine] = []
             
             for searchLine in lines {
-                if equalPositionWithTolerance(a: line.frame.minY, b: searchLine.frame.minY, tolerance: 5),
-                    !linesSomeYPosition.contains(searchLine){
-                    linesSomeYPosition.append(searchLine)
+                if equalPositionWithTolerance(a: line.frame.minY, b: searchLine.frame.minY, tolerance: tolerance),
+                    !linesSomeVerticalPosition.contains(searchLine){
+                    linesSomeVerticalPosition.append(searchLine)
                     lineUsed.append(searchLine)
                 }
             }
 
-            linesSomeYPosition = linesSomeYPosition.sorted(by: { $0.frame.minX < $1.frame.minX })
-            groupLines.append(linesSomeYPosition)
+            linesSomeVerticalPosition = linesSomeVerticalPosition.sorted(by: { $0.frame.minX < $1.frame.minX })
+            groupLines.append(linesSomeVerticalPosition)
         }
         
         for groupLine in groupLines {
@@ -77,7 +78,7 @@ class OCRUtility: NSObject {
         return newBlocks
     }
     
-    func equalPositionWithTolerance(a : CGFloat, b : CGFloat, tolerance : CGFloat) -> Bool {
+    private func equalPositionWithTolerance(a : CGFloat, b : CGFloat, tolerance : CGFloat) -> Bool {
         if a >= b && a <= b + tolerance {
             return true
         }

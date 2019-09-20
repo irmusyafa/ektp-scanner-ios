@@ -13,54 +13,41 @@ class CardDatabase: NSObject {
     private static let managedContext = DatabaseInstance.SharedInstance().managedObjectContext()
     private static let persistentCoordinator = DatabaseInstance.SharedInstance().persistentStoreCoordinator
     private static let entityName = "CardEntity"
-    
-    public class func getAllObjects() -> [CardModel] {
+
+    public class func getObject(id: NSNumber) -> CardManagedObject? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.fetchLimit = 1
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+
         let fetchResults = try? managedContext.fetch(fetchRequest)
-        guard let objects = fetchResults as? [CardManagedObject] else { return [] }
-        return objects.map({ return $0.object })
+        guard let objects = fetchResults as? [CardManagedObject] else { return nil }
+        return objects.first
     }
     
-    public class func saveNewObject(object: IdentityModel, image: UIImage, faceImage: UIImage) -> Bool {
-        guard let newObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext) as? CardManagedObject else { return false }
+    public class func getAllObjects() -> [CardManagedObject] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        let fetchResults = try? managedContext.fetch(fetchRequest)
+
+        guard let objects = fetchResults as? [CardManagedObject] else { return [] }
+        return objects
+    }
+    
+    public class func saveNewObject(identity: IdentityModel, image: UIImage, faceImage: UIImage) -> Bool {
+        guard let newObject = getNewObject() else { return false }
         newObject.id = getNewID()
+        newObject.updateObject(identity: identity, image: image, date: Utilities.getCurrentDate())
         
-        newObject.idNumber = object.idNumber
-        newObject.firstName = object.firstName
-        newObject.sureName = object.sureName
-        newObject.sureNameBirthDate = object.sureNameBirthDate
-        newObject.gender = object.gender?.rawValue
-        newObject.birthdate = object.birthdate
-        newObject.signature = object.signature
-        newObject.nationality = object.nationality
-        newObject.faceImage = faceImage.pngData()
-        
-        newObject.image = image.pngData()
-        newObject.date = getDate()
-        
-        do {
-            try managedContext.save()
-            return true
-        }
-        catch {
-            return false
-        }
+        return saveContext()
     }
     
     public class func deleteObject(id: NSNumber) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
-        let fetchResults = try? managedContext.fetch(fetchRequest)
-        guard let objects = fetchResults as? [CardManagedObject] else { return false }
-        
-        var deletedObject: CardManagedObject = CardManagedObject()
-        for object in objects {
-            if object.id == id {
-                deletedObject = object
-            }
-        }
-        
+        guard let deletedObject = getObject(id: id) else { return false }
         managedContext.delete(deletedObject)
-        
+
+        return saveContext()
+    }
+    
+    private class func saveContext() -> Bool {
         do {
             try managedContext.save()
             return true
@@ -68,19 +55,16 @@ class CardDatabase: NSObject {
         catch {
             return false
         }
+    }
+    
+    private class func getNewObject() -> CardManagedObject? {
+        return NSEntityDescription.insertNewObject(
+            forEntityName: entityName,
+            into: managedContext) as? CardManagedObject
     }
     
     private class func getNewID() -> NSNumber {
         let lastID = getAllObjects().count + 1
         return NSNumber(value: lastID)
-    }
-    
-    private class func getDate() -> Date {
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(identifier: "GMT")
-        formatter.dateFormat = "d MMM, yyyy"
-        
-        let dateStr = formatter.string(from: Date())
-        return formatter.date(from: dateStr) ?? Date()
     }
 }

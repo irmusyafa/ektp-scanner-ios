@@ -11,7 +11,7 @@ import UIKit
 class CardDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    public var item: CardModel!
+    public var cardModel: CardModel!
 
     private var extractedItems: [String?] = []
     private var sectionHeaders: [String]!
@@ -24,8 +24,8 @@ class CardDetailViewController: UIViewController {
     }
     
     private func initiateData() {
-        sectionHeaders = viewModel.getHeaders()
-        extractedItems = item.extractedItems
+        sectionHeaders = viewModel.headers
+        extractedItems = viewModel.extractCardModel(cardModel: cardModel)
     }
 }
 
@@ -41,7 +41,7 @@ extension CardDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0,
             let cell = tableView.dequeueReusableCell(withIdentifier: "image_cell") as? FullImageTableViewCell {
-            cell.setup(item)
+            cell.setup(cardModel)
             return cell
         }
         if indexPath.row > 0,

@@ -38,7 +38,7 @@ class CardScannerResultViewController: UIViewController {
     }
     
     private func initiateData() {
-        headers = viewModel.getHeaders()
+        headers = viewModel.headers
         syncExtractedData()
         self.table.reloadData()
     }
@@ -78,7 +78,7 @@ class CardScannerResultViewController: UIViewController {
     }
     
     @IBAction func saveContinue(_ sender: UIButton) {
-        viewModel.saveNewPerson(data: textBlocksExtracted, image: capturedImage, faceImage: capturedFace) { (succeed: Bool?) in
+        viewModel.addCard(data: textBlocksExtracted, image: capturedImage, faceImage: capturedFace) { (succeed: Bool?) in
             if let _ = succeed {
                 self.navigationController?.popToRootViewController(animated: true)
                 return
@@ -95,12 +95,12 @@ extension CardScannerResultViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getHeaders().count
+        return viewModel.headers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "info_cell") as? CardDetailDataTableViewCell {
-            let key = viewModel.getHeaders()[indexPath.row].lowercased()
+            let key = viewModel.headers[indexPath.row].lowercased()
             cell.setup(title: key.uppercased(), data: textBlocksExtracted[key])
             return cell
         }

@@ -19,6 +19,5 @@ class BaseDetectionUtility: NSObject {
     }
     
     public func detect(_ liveImage: CIImage) { }
-    
     internal func handleRequest(request: VNRequest, error: Error?) { }
 }

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B4B5F2335CEAE7A6A7F1655C /* Pods_EKTP_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */; };
+		EC197618233488B500A80386 /* IdentityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC197617233488B500A80386 /* IdentityModel.swift */; };
+		EC19761A23348A9000A80386 /* CustomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19761923348A9000A80386 /* CustomExtension.swift */; };
+		EC19761C23348B6600A80386 /* CardManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19761B23348B6600A80386 /* CardManagedObject.swift */; };
 		EC458AEA233236FB00F2FAA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458AE9233236FB00F2FAA4 /* AppDelegate.swift */; };
 		EC458AEF233236FB00F2FAA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC458AED233236FB00F2FAA4 /* Main.storyboard */; };
 		EC458AF2233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */; };
@@ -37,6 +40,7 @@
 		EC458B4323325D4F00F2FAA4 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B4223325D4F00F2FAA4 /* CardTableViewCell.swift */; };
 		EC458B4623325D7E00F2FAA4 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B4523325D7E00F2FAA4 /* RoundedButton.swift */; };
 		EC49FA9A2332982100520CA6 /* CardDetailDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49FA992332982100520CA6 /* CardDetailDataTableViewCell.swift */; };
+		ECBAB2D22334E37200FB84FF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBAB2D12334E37200FB84FF /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,9 @@
 		09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKTP_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DE6B4A310F63F53E26C0FA /* Pods-EKTP-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.debug.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		781BBDB074EC23FF050D296C /* Pods-EKTP-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.release.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		EC197617233488B500A80386 /* IdentityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityModel.swift; sourceTree = "<group>"; };
+		EC19761923348A9000A80386 /* CustomExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtension.swift; sourceTree = "<group>"; };
+		EC19761B23348B6600A80386 /* CardManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManagedObject.swift; sourceTree = "<group>"; };
 		EC458AE6233236FB00F2FAA4 /* EKTP-Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EKTP-Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC458AE9233236FB00F2FAA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC458AEE233236FB00F2FAA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +93,7 @@
 		EC458B4223325D4F00F2FAA4 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		EC458B4523325D7E00F2FAA4 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		EC49FA992332982100520CA6 /* CardDetailDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailDataTableViewCell.swift; sourceTree = "<group>"; };
+		ECBAB2D12334E37200FB84FF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,7 @@
 			children = (
 				EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */,
 				EC458B2C2332596E00F2FAA4 /* CardDatabase.swift */,
+				EC19761B23348B6600A80386 /* CardManagedObject.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -210,6 +219,8 @@
 			children = (
 				EC458B4423325D6B00F2FAA4 /* CustomView */,
 				EC458B28233257F800F2FAA4 /* Recognition */,
+				EC19761923348A9000A80386 /* CustomExtension.swift */,
+				ECBAB2D12334E37200FB84FF /* Constant.swift */,
 				EC458B1623323B0500F2FAA4 /* DatabaseInstance.swift */,
 				EC458B1C2332574500F2FAA4 /* ImageUtils.swift */,
 				EC458B1E2332576E00F2FAA4 /* Utilities.swift */,
@@ -269,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				EC458B2A233258A600F2FAA4 /* CardModel.swift */,
+				EC197617233488B500A80386 /* IdentityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,12 +481,15 @@
 				EC458B1F2332576E00F2FAA4 /* Utilities.swift in Sources */,
 				EC458B3723325C0F00F2FAA4 /* CardDetailViewController.swift in Sources */,
 				EC458AF2233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld in Sources */,
+				EC19761C23348B6600A80386 /* CardManagedObject.swift in Sources */,
 				EC458B2D2332596E00F2FAA4 /* CardDatabase.swift in Sources */,
 				EC458B3923325C3100F2FAA4 /* FullImageTableViewCell.swift in Sources */,
+				ECBAB2D22334E37200FB84FF /* Constant.swift in Sources */,
 				EC458B4123325D2C00F2FAA4 /* CardListViewController.swift in Sources */,
 				EC458B4323325D4F00F2FAA4 /* CardTableViewCell.swift in Sources */,
 				EC458B212332579300F2FAA4 /* CardDetectionUtility.swift in Sources */,
 				EC458AEA233236FB00F2FAA4 /* AppDelegate.swift in Sources */,
+				EC19761A23348A9000A80386 /* CustomExtension.swift in Sources */,
 				EC458B2B233258A600F2FAA4 /* CardModel.swift in Sources */,
 				EC458B25233257D400F2FAA4 /* OCRUtility.swift in Sources */,
 				EC458B3F23325CF800F2FAA4 /* CardScannerResultViewController.swift in Sources */,
@@ -483,6 +498,7 @@
 				EC458B3123325B6600F2FAA4 /* CardScannerViewController.swift in Sources */,
 				EC458B3B23325C7400F2FAA4 /* CircleButton.swift in Sources */,
 				EC458B1723323B0500F2FAA4 /* DatabaseInstance.swift in Sources */,
+				EC197618233488B500A80386 /* IdentityModel.swift in Sources */,
 				EC49FA9A2332982100520CA6 /* CardDetailDataTableViewCell.swift in Sources */,
 				EC458B4623325D7E00F2FAA4 /* RoundedButton.swift in Sources */,
 				EC458B27233257E800F2FAA4 /* BaseDetectionUtility.swift in Sources */,

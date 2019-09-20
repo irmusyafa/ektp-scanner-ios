@@ -130,6 +130,7 @@ func convertTransparent(image: UIImage, color: UIColor) -> UIImage {
     let width = image.size.width
     let height = image.size.height
     let imageRect: CGRect = CGRect(x: 0.0, y: 0.0, width: width, height: height)
+
     let ctx: CGContext = UIGraphicsGetCurrentContext()!
     let redValue = CGFloat(color.cgColor.components![0])
     let greenValue = CGFloat(color.cgColor.components![1])
@@ -137,9 +138,11 @@ func convertTransparent(image: UIImage, color: UIColor) -> UIImage {
     let alphaValue = CGFloat(color.cgColor.components![3])
     ctx.setFillColor(red: redValue, green: greenValue, blue: blueValue, alpha: alphaValue)
     ctx.fill(imageRect)
+
     image.draw(in: imageRect)
     let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
     UIGraphicsEndImageContext()
+
     return newImage
 }
 
@@ -147,10 +150,12 @@ func getPixelColor(fromImage image: UIImage, pixel: CGPoint) -> UIColor {
     let pixelData = image.cgImage!.dataProvider!.data
     let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
     let pixelInfo: Int = ((Int(image.size.width) * Int(pixel.y)) + Int(pixel.x)) * 4
+
     let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
     let g = CGFloat(data[pixelInfo + 1]) / CGFloat(255.0)
     let b = CGFloat(data[pixelInfo + 2]) / CGFloat(255.0)
     let a = CGFloat(data[pixelInfo + 3]) / CGFloat(255.0)
+
     return UIColor(red: r, green: g, blue: b, alpha: a)
 }
 

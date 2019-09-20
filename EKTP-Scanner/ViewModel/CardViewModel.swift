@@ -16,46 +16,54 @@ class CardViewModel: NSObject {
     }
     
     public func getCard() -> [CardModel] {
-        return CardDatabase.getAllObjects()
+        return CardDatabase.getAllObjects().map({ $0.object })
     }
     
-    public func saveNewPerson(data: [String:String], image: UIImage, faceImage: UIImage, completionHandler: identitySavingCompletionHandler) {
+    public func addCard(data: [String:String],
+                        image: UIImage,
+                        faceImage: UIImage,
+                        completionHandler: identitySavingCompletionHandler) {
 
         let person = IdentityModel()
-        if let firstName = data["first name"] { person.firstName = firstName }
-        if let surName = data["surname"] { person.sureName = surName }
-        if let surnameBirth = data["surname at birth"] { person.sureNameBirthDate = surnameBirth }
-        if let idNumber = data["id number"] { person.idNumber = idNumber }
-        if let birthDate = data["date of birth"] { person.birthdate = Utility.getDate(from: birthDate) }
-        if let gender = data["gender"] { person.gender = getGender(from: gender) }
-        if let signature = data["signature"] { person.signature = signature }
-        if let nationality = data["nationality"] { person.nationality = nationality }
+        person.updateObject(data: data)
+        person.faceImage = image
         
-        if CardDatabase.saveNewObject(object: person, image: image, faceImage: faceImage) {
+        if CardDatabase.saveNewObject(identity: person, image: image, faceImage: faceImage) {
             completionHandler(true)
             return
         }
         completionHandler(false)
     }
     
-    public func getHeaders() -> [String] {
-        return [
-            "Provinsi",
-            "NIK",
-            "Nama",
-            "Jenis Kelamin",
-            "Alamat",
-            "Agama",
-            "Kecamatan",
-            "Status Perkawinan",
-            "Kewarganegaraan",
-            "Berlaku Hingga",
-        ]
+    public func extractCardModel(cardModel : CardModel) -> [String?] {
+        var extractedItems : [String?] = []
+        extractedItems.append(cardModel.identity?.idNumber)
+        extractedItems.append(cardModel.identity?.name)
+        extractedItems.append(cardModel.identity?.gender)
+        extractedItems.append(cardModel.identity?.address)
+        extractedItems.append(cardModel.identity?.district)
+        extractedItems.append(cardModel.identity?.village)
+        extractedItems.append(cardModel.identity?.addressSection)
+        extractedItems.append(cardModel.identity?.religion)
+        extractedItems.append(cardModel.identity?.maritalStatus)
+        extractedItems.append(cardModel.identity?.nationality)
+        extractedItems.append(cardModel.identity?.expiredDate)
+        return extractedItems
     }
-}
-
-extension CardViewModel {
-    private func getGender(from str: String) -> Gender {
-        return Gender(rawValue: str.trimmingCharacters(in: .whitespacesAndNewlines)) ?? Gender.X
+    
+    public var headers : [String] {
+        return [
+            Constants.idNumber,
+            Constants.name,
+            Constants.gender,
+            Constants.address,
+            Constants.district,
+            Constants.village,
+            Constants.addressSection,
+            Constants.religion,
+            Constants.maritalStatus,
+            Constants.nationality,
+            Constants.expiredDate
+        ]
     }
 }

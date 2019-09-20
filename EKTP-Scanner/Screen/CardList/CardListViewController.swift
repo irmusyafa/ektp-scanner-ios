@@ -11,7 +11,7 @@ import UIKit
 class CardListViewController: UIViewController {
     private let viewModel = CardViewModel()
     private var card: [CardModel]?
-    private var selectedItem: CardModel!
+    private var selectedCardModel: CardModel!
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class CardListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CardDetailViewController {
-            destination.item = selectedItem
+            destination.cardModel = selectedCardModel
         }
     }
 }
@@ -62,7 +62,7 @@ extension CardListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.selectedItem = card?[indexPath.row]
+        self.selectedCardModel = card?[indexPath.row]
         performSegue(withIdentifier: "show", sender: self)
     }
 }

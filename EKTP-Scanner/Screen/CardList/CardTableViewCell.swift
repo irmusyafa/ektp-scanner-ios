@@ -22,8 +22,8 @@ class CardTableViewCell: UITableViewCell {
         guard let object = object else { return }
         
         self.objectImage.image = object.image
-        self.objectName.text = (object.person?.firstName ?? "") + " " + (object.person?.sureName ?? "")
-        self.objectDate.text = Utility.getString(from: object.date ?? Date())
+        self.objectName.text = (object.identity?.name ?? "")
+        self.objectDate.text = Utilities.getString(from: object.date ?? Date())
     }
     
 }
