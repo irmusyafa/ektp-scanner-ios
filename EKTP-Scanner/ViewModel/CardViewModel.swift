@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias identitySavingCompletionHandler = ((_ succeed: Bool?) -> Void)
+typealias completionHandler = ((_ succeed: Bool) -> Void)
 
 class CardViewModel: NSObject {
     override init() {
@@ -19,10 +19,19 @@ class CardViewModel: NSObject {
         return CardDatabase.getAllObjects().map({ $0.object })
     }
     
+    public func deleteCard(id : NSNumber,
+                           completionHandler: completionHandler) {
+        if CardDatabase.deleteObject(id: id) {
+            completionHandler(true)
+            return
+        }
+        completionHandler(false)
+    }
+    
     public func addCard(data: [String:String],
                         image: UIImage,
                         faceImage: UIImage,
-                        completionHandler: identitySavingCompletionHandler) {
+                        completionHandler: completionHandler) {
 
         let person = IdentityModel()
         person.updateObject(data: data)

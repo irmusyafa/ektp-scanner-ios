@@ -27,6 +27,15 @@ class CardDetailViewController: UIViewController {
         sectionHeaders = viewModel.headers
         extractedItems = viewModel.extractCardModel(cardModel: cardModel)
     }
+    
+    @IBAction func deleteCard(_ sender: UIButton) {
+        guard let id = cardModel.id else { return }
+        viewModel.deleteCard(id: NSNumber(value: id), completionHandler: { (succeed: Bool) in
+            if succeed {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        })
+    }
 }
 
 extension CardDetailViewController: UITableViewDataSource {

@@ -475,7 +475,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IdY-bY-5qC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail E-KTP" id="aCT-gb-Cvz"/>
+                    <navigationItem key="navigationItem" title="Detail E-KTP" id="aCT-gb-Cvz">
+                        <barButtonItem key="rightBarButtonItem" title="Hapus" style="done" id="Uen-wG-qP6">
+                            <connections>
+                                <action selector="deleteCard:" destination="aa0-Z6-34H" id="DHg-kl-Dd1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="FPt-Ev-Gk4" id="Jtn-LN-ES9"/>
                     </connections>
