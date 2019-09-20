@@ -10,7 +10,7 @@ import Foundation
 
 struct Constants {
     static let address = "alamat"
-    static let addressSection = "rt/rw"
+    static let addressSection = "rtrw"
     static let bloodType = "gol darah"
     static let birthDate = "tgl lahir"
     static let district = "kecamatan"
@@ -22,5 +22,5 @@ struct Constants {
     static let name = "nama"
     static let religion = "agama"
     static let province = "provinsi"
-    static let village = "kelurahan"
+    static let village = "keldesa"
 }

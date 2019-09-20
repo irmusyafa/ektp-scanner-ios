@@ -41,9 +41,10 @@ class CardViewModel: NSObject {
         extractedItems.append(cardModel.identity?.name)
         extractedItems.append(cardModel.identity?.gender)
         extractedItems.append(cardModel.identity?.address)
-        extractedItems.append(cardModel.identity?.district)
-        extractedItems.append(cardModel.identity?.village)
         extractedItems.append(cardModel.identity?.addressSection)
+        extractedItems.append(cardModel.identity?.village)
+        extractedItems.append(cardModel.identity?.province)
+        extractedItems.append(cardModel.identity?.district)
         extractedItems.append(cardModel.identity?.religion)
         extractedItems.append(cardModel.identity?.maritalStatus)
         extractedItems.append(cardModel.identity?.nationality)
@@ -57,9 +58,10 @@ class CardViewModel: NSObject {
             Constants.name,
             Constants.gender,
             Constants.address,
-            Constants.district,
-            Constants.village,
             Constants.addressSection,
+            Constants.village,
+            Constants.district,
+            Constants.province,
             Constants.religion,
             Constants.maritalStatus,
             Constants.nationality,

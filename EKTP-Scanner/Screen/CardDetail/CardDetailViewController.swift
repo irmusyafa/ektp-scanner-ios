@@ -46,7 +46,9 @@ extension CardDetailViewController: UITableViewDataSource {
         }
         if indexPath.row > 0,
             let cell = tableView.dequeueReusableCell(withIdentifier: "info_cell") as? CardDetailDataTableViewCell {
-            cell.setup(title: sectionHeaders[indexPath.row], data: extractedItems[indexPath.row - 1])
+            let title = sectionHeaders[indexPath.row].uppercased()
+            let data = extractedItems[indexPath.row]?.uppercased()
+            cell.setup(title: title, data: data)
             return cell
         }
         return UITableViewCell()

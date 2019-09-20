@@ -9,7 +9,6 @@
 import UIKit
 
 class CardTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var objectImage: UIImageView!
     @IBOutlet weak var objectName: UILabel!
     @IBOutlet weak var objectDate: UILabel!
@@ -22,8 +21,7 @@ class CardTableViewCell: UITableViewCell {
         guard let object = object else { return }
         
         self.objectImage.image = object.image
-        self.objectName.text = (object.identity?.name ?? "")
+        self.objectName.text = object.identity?.name?.uppercased() ?? ""
         self.objectDate.text = Utilities.getString(from: object.date ?? Date())
     }
-    
 }

@@ -76,7 +76,7 @@
                                             <action selector="dismissVC:" destination="I0K-Fl-KrE" eventType="touchUpInside" id="h3f-VG-L8c"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMp-Di-V0d">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasil Pindai E-KTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMp-Di-V0d">
                                         <rect key="frame" x="24" y="14" width="324" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="OmX-XB-lee"/>
@@ -106,7 +106,7 @@
                                             <constraint firstAttribute="height" constant="50" id="gzz-Ku-fgu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Save &amp; Continue">
+                                        <state key="normal" title="Simpan &amp; Lanjutkan">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="204" y="134"/>
         </scene>
-        <!--Scan ID Card-->
+        <!--Pindai E-KTP-->
         <scene sceneID="WY0-ya-kTq">
             <objects>
                 <viewController id="rh6-n7-rLV" customClass="CardScannerViewController" customModule="EKTP_Scanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ABZ-TQ-k5K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scan ID Card" id="GWM-oj-EGB">
+                    <navigationItem key="navigationItem" title="Pindai E-KTP" id="GWM-oj-EGB">
                         <barButtonItem key="backBarButtonItem" title=" " id="I2d-wn-Rdr"/>
                     </navigationItem>
                     <connections>
@@ -190,7 +190,7 @@
             </objects>
             <point key="canvasLocation" x="1783" y="134"/>
         </scene>
-        <!--ID Card Scanner-->
+        <!--Daftar Data E-KTP-->
         <scene sceneID="q3E-Ab-SBf">
             <objects>
                 <viewController id="XaD-iA-ZhV" customClass="CardListViewController" customModule="EKTP_Scanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,7 +217,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjY-R2-qQz">
-                                                    <rect key="frame" x="135" y="11" width="259" height="24"/>
+                                                    <rect key="frame" x="135" y="19" width="259" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="qhm-yh-OtW"/>
                                                     </constraints>
@@ -225,8 +225,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nationality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-Qs-EOX">
-                                                    <rect key="frame" x="135" y="47" width="259" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-Qs-EOX">
+                                                    <rect key="frame" x="135" y="43" width="259" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="rL8-5m-7aA"/>
                                                     </constraints>
@@ -242,9 +242,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="cjY-R2-qQz" secondAttribute="trailing" id="NFS-bl-D34"/>
                                                 <constraint firstItem="jkZ-K3-W91" firstAttribute="leading" secondItem="peb-e6-pqI" secondAttribute="leadingMargin" id="bxE-S4-xZ3"/>
                                                 <constraint firstItem="jkZ-K3-W91" firstAttribute="top" secondItem="peb-e6-pqI" secondAttribute="topMargin" id="gBB-MB-gyC"/>
-                                                <constraint firstItem="cjY-R2-qQz" firstAttribute="top" secondItem="peb-e6-pqI" secondAttribute="topMargin" id="rkU-4i-ms6"/>
+                                                <constraint firstItem="cjY-R2-qQz" firstAttribute="top" secondItem="peb-e6-pqI" secondAttribute="topMargin" constant="8" id="rkU-4i-ms6"/>
                                                 <constraint firstItem="cjY-R2-qQz" firstAttribute="leading" secondItem="jkZ-K3-W91" secondAttribute="trailing" constant="16" id="saw-d6-sBl"/>
-                                                <constraint firstItem="bPM-Qs-EOX" firstAttribute="top" secondItem="cjY-R2-qQz" secondAttribute="bottom" constant="12" id="vko-RV-eND"/>
+                                                <constraint firstItem="bPM-Qs-EOX" firstAttribute="top" secondItem="cjY-R2-qQz" secondAttribute="bottom" id="vko-RV-eND"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -288,7 +288,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tqm-Xa-0dH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ID Card Scanner" id="xec-8E-Fk4">
+                    <navigationItem key="navigationItem" title="Daftar Data E-KTP" id="xec-8E-Fk4">
                         <barButtonItem key="backBarButtonItem" title=" " id="Y5x-5d-gph"/>
                     </navigationItem>
                     <connections>
@@ -391,7 +391,7 @@
             </objects>
             <point key="canvasLocation" x="2565.5999999999999" y="530.28485757121439"/>
         </scene>
-        <!--Card Information-->
+        <!--Detail E-KTP-->
         <scene sceneID="8fQ-XR-zzf">
             <objects>
                 <viewController id="aa0-Z6-34H" customClass="CardDetailViewController" customModule="EKTP_Scanner" customModuleProvider="target" sceneMemberID="viewController">
@@ -475,7 +475,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IdY-bY-5qC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Card Information" id="aCT-gb-Cvz"/>
+                    <navigationItem key="navigationItem" title="Detail E-KTP" id="aCT-gb-Cvz"/>
                     <connections>
                         <outlet property="tableView" destination="FPt-Ev-Gk4" id="Jtn-LN-ES9"/>
                     </connections>

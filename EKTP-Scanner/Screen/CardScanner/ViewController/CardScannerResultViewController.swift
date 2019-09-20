@@ -45,7 +45,7 @@ class CardScannerResultViewController: UIViewController {
     
     private func syncExtractedData() {
         for counter in 0..<textBlocks.count {
-            let text = textBlocks[counter]
+            let text = textBlocks[counter].lowercased()
             if let relatedSection = getRelatedSection(text) {
                 var value = text.components(separatedBy: relatedSection)
                 var data = ""
@@ -53,12 +53,13 @@ class CardScannerResultViewController: UIViewController {
                     data = value[1]
                     data = data.replacingOccurrences(of: ": ", with: "")
                     data = data.replacingOccurrences(of: ":", with: "")
+                    data = data.trimmingCharacters(in: .whitespaces)
                 }
                 textBlocksExtracted[relatedSection.lowercased()] = data
             }
             else if text.lowercased().contains("provinsi") {
-                headers.removeAll(where: { $0 == "Provinsi" })
-                textBlocksExtracted["Provinsi".lowercased()] = text
+                headers.removeAll(where: { $0 == "provinsi" })
+                textBlocksExtracted["provinsi"] = text
             }
         }
     }
@@ -100,8 +101,8 @@ extension CardScannerResultViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "info_cell") as? CardDetailDataTableViewCell {
-            let key = viewModel.headers[indexPath.row].lowercased()
-            cell.setup(title: key.uppercased(), data: textBlocksExtracted[key])
+            let key = viewModel.headers[indexPath.row]
+            cell.setup(title: key.uppercased(), data: textBlocksExtracted[key]?.uppercased())
             return cell
         }
         return UITableViewCell()

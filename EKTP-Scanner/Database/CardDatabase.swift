@@ -36,6 +36,7 @@ class CardDatabase: NSObject {
         guard let newObject = getNewObject() else { return false }
         newObject.id = getNewID()
         newObject.updateObject(identity: identity, image: image, date: Utilities.getCurrentDate())
+        newObject.cardImage = image.pngData()
         
         return saveContext()
     }
