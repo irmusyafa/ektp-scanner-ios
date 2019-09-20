@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="HistoryEntity" representedClassName=".HistoryManagedObject" syncable="YES">
+    <entity name="CardEntity" representedClassName=".CardManagedObject" syncable="YES">
         <attribute name="birthdate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="faceImage" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
@@ -15,6 +15,6 @@
         <attribute name="sureNameBirthDate" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="HistoryEntity" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="CardEntity" positionX="-63" positionY="-18" width="128" height="225"/>
     </elements>
 </model>

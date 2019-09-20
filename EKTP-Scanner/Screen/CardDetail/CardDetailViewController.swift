@@ -10,30 +10,22 @@ import UIKit
 
 class CardDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    public var item: HistoryObject!
+
+    public var item: CardModel!
+
     private var extractedItems: [String?] = []
-    private var sectionHeaders: [String] {
-        return ["Images", "Surname", "First Name", "Surname at Birth", "ID Number", "Date of Birth", "Gender", "Signature", "Nationality", "Registration Date"]
-    }
+    private var sectionHeaders: [String]!
+    private let viewModel = CardViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        extractItems()
+        initiateData()
     }
     
-    private func extractItems() {
-        extractedItems = []
-        extractedItems.insert(item.person?.sureName, at: 0)
-        extractedItems.insert(item.person?.firstName, at: 1)
-        extractedItems.insert(item.person?.sureNameBirthDate, at: 2)
-        extractedItems.insert(item.person?.idNumber, at: 3)
-        extractedItems.insert(Utility.getString(from: item.person?.birthdate), at: 4)
-        extractedItems.insert(item.person?.gender?.description, at: 5)
-        extractedItems.insert(item.person?.signature, at: 6)
-        extractedItems.insert(item.person?.nationality, at: 7)
-        extractedItems.insert(Utility.getString(from: item.date
-        ), at: 8)
+    private func initiateData() {
+        sectionHeaders = viewModel.getHeaders()
+        extractedItems = item.extractedItems
     }
 }
 

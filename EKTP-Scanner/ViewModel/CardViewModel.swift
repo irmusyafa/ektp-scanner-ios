@@ -1,5 +1,5 @@
 //
-//  HistoryViewModel.swift
+//  CardViewModel.swift
 //  EKTP-Scanner
 //
 //  Created by Irfan Rafii Musyafa on 18/09/19.
@@ -8,19 +8,20 @@
 
 import UIKit
 
-typealias personSavingCompletionHandler = ((_ succeed: Bool?) -> Void)
+typealias identitySavingCompletionHandler = ((_ succeed: Bool?) -> Void)
 
-class HistoryViewModel: NSObject {
+class CardViewModel: NSObject {
     override init() {
         super.init()
     }
     
-    public func getHistory() -> [HistoryObject] {
-        return HistoryDatabase.getAllObjects()
+    public func getCard() -> [CardModel] {
+        return CardDatabase.getAllObjects()
     }
     
-    public func saveNewPerson(data: [String:String], image: UIImage, faceImage: UIImage, completionHandler: personSavingCompletionHandler) {
-        let person = PersonObject()
+    public func saveNewPerson(data: [String:String], image: UIImage, faceImage: UIImage, completionHandler: identitySavingCompletionHandler) {
+
+        let person = IdentityModel()
         if let firstName = data["first name"] { person.firstName = firstName }
         if let surName = data["surname"] { person.sureName = surName }
         if let surnameBirth = data["surname at birth"] { person.sureNameBirthDate = surnameBirth }
@@ -30,16 +31,30 @@ class HistoryViewModel: NSObject {
         if let signature = data["signature"] { person.signature = signature }
         if let nationality = data["nationality"] { person.nationality = nationality }
         
-        if HistoryDatabase.saveNewObject(object: person, image: image, faceImage: faceImage) {
+        if CardDatabase.saveNewObject(object: person, image: image, faceImage: faceImage) {
             completionHandler(true)
             return
         }
         completionHandler(false)
     }
     
+    public func getHeaders() -> [String] {
+        return [
+            "Provinsi",
+            "NIK",
+            "Nama",
+            "Jenis Kelamin",
+            "Alamat",
+            "Agama",
+            "Kecamatan",
+            "Status Perkawinan",
+            "Kewarganegaraan",
+            "Berlaku Hingga",
+        ]
+    }
 }
 
-extension HistoryViewModel {
+extension CardViewModel {
     private func getGender(from str: String) -> Gender {
         return Gender(rawValue: str.trimmingCharacters(in: .whitespacesAndNewlines)) ?? Gender.X
     }

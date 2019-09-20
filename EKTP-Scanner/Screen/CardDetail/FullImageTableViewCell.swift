@@ -16,7 +16,7 @@ class FullImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    public func setup(_ item: HistoryObject) {
+    public func setup(_ item: CardModel) {
         if let card = item.image { self.userCard.image = card }
     }
 }

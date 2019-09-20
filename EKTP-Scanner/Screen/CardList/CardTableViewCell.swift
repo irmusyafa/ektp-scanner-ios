@@ -18,7 +18,7 @@ class CardTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    public func setup(_ object: HistoryObject?) {
+    public func setup(_ object: CardModel?) {
         guard let object = object else { return }
         
         self.objectImage.image = object.image

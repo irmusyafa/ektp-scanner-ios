@@ -14,7 +14,7 @@ protocol CardDetectionUtilityDelegate {
     func didDetectCardImage(_ image: CIImage, at rect: CGRect)
 }
 
-class CardDetectionUtility: DetectionUtility {
+class CardDetectionUtility: BaseDetectionUtility {
     public var delegate: CardDetectionUtilityDelegate?
     private var rectangleQueue: DispatchQueue!
     private lazy var rectanglesRequest: VNDetectRectanglesRequest = {

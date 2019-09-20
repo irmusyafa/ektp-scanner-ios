@@ -1,5 +1,5 @@
 //
-//  HistoryDatabase.swift
+//  CardDatabase.swift
 //  EKTP-Scanner
 //
 //  Created by Irfan Rafii Musyafa on 18/09/19.
@@ -9,19 +9,20 @@
 import UIKit
 import CoreData
 
-class HistoryDatabase: NSObject {
+class CardDatabase: NSObject {
     private static let managedContext = DatabaseInstance.SharedInstance().managedObjectContext()
     private static let persistentCoordinator = DatabaseInstance.SharedInstance().persistentStoreCoordinator
+    private static let entityName = "CardEntity"
     
-    public class func getAllObjects() -> [HistoryObject] {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HistoryEntity")
+    public class func getAllObjects() -> [CardModel] {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         let fetchResults = try? managedContext.fetch(fetchRequest)
-        guard let objects = fetchResults as? [HistoryManagedObject] else { return [] }
+        guard let objects = fetchResults as? [CardManagedObject] else { return [] }
         return objects.map({ return $0.object })
     }
     
-    public class func saveNewObject(object: PersonObject, image: UIImage, faceImage: UIImage) -> Bool {
-        guard let newObject = NSEntityDescription.insertNewObject(forEntityName: "HistoryEntity", into: managedContext) as? HistoryManagedObject else { return false }
+    public class func saveNewObject(object: IdentityModel, image: UIImage, faceImage: UIImage) -> Bool {
+        guard let newObject = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedContext) as? CardManagedObject else { return false }
         newObject.id = getNewID()
         
         newObject.idNumber = object.idNumber
@@ -47,11 +48,11 @@ class HistoryDatabase: NSObject {
     }
     
     public class func deleteObject(id: NSNumber) -> Bool {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HistoryEntity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         let fetchResults = try? managedContext.fetch(fetchRequest)
-        guard let objects = fetchResults as? [HistoryManagedObject] else { return false }
+        guard let objects = fetchResults as? [CardManagedObject] else { return false }
         
-        var deletedObject: HistoryManagedObject = HistoryManagedObject()
+        var deletedObject: CardManagedObject = CardManagedObject()
         for object in objects {
             if object.id == id {
                 deletedObject = object

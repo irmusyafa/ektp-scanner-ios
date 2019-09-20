@@ -9,29 +9,16 @@
 import UIKit
 
 class CardScannerResultViewController: UIViewController {
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var saveBtn: UIButton!
+
     public var textBlocks: [String]!
     public var capturedImage: UIImage!
     public var capturedFace: UIImage!
+
     private var textBlocksExtracted: Dictionary<String,String> = [:]
-    private var sectionHeaders: [String] {
-        return [
-            "Provinsi",
-            "NIK",
-            "Nama",
-            "Jenis Kelamin",
-            "Alamat",
-            "Agama",
-            "Kecamatan",
-            "Status Perkawinan",
-            "Kewarganegaraan",
-            "Berlaku Hingga",
-        ]
-    }
-    private var sectionHeadersCopy: [String]!
-    private let viewModel = HistoryViewModel()
-    
-    @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var saveBtn: UIButton!
+    private var headers: [String]!
+    private let viewModel = CardViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +38,12 @@ class CardScannerResultViewController: UIViewController {
     }
     
     private func initiateData() {
-        sectionHeadersCopy = sectionHeaders
+        headers = viewModel.getHeaders()
+        syncExtractedData()
+        self.table.reloadData()
+    }
+    
+    private func syncExtractedData() {
         for counter in 0..<textBlocks.count {
             let text = textBlocks[counter]
             if let relatedSection = getRelatedSection(text) {
@@ -65,17 +57,16 @@ class CardScannerResultViewController: UIViewController {
                 textBlocksExtracted[relatedSection.lowercased()] = data
             }
             else if text.lowercased().contains("provinsi") {
-                sectionHeadersCopy.removeAll(where: { $0 == "Provinsi" })
+                headers.removeAll(where: { $0 == "Provinsi" })
                 textBlocksExtracted["Provinsi".lowercased()] = text
             }
         }
-        self.table.reloadData()
     }
     
     private func getRelatedSection(_ blockText: String) -> String? {
-        for section in sectionHeadersCopy {
+        for section in headers {
             if blockText.contains(section) {
-                sectionHeadersCopy.removeAll(where: { $0 == section })
+                headers.removeAll(where: { $0 == section })
                 return section
             }
         }
@@ -100,23 +91,26 @@ class CardScannerResultViewController: UIViewController {
 
 extension CardScannerResultViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionHeaders.count
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = table.dequeueReusableCell(withIdentifier: "result_cell") else { return UITableViewCell() }
-        
-        let currentSection = sectionHeaders[indexPath.section].lowercased()
-        cell.textLabel?.text = textBlocksExtracted[currentSection]
-        
-        return cell
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getHeaders().count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionHeaders[section]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "info_cell") as? CardDetailDataTableViewCell {
+            let key = viewModel.getHeaders()[indexPath.row].lowercased()
+            cell.setup(title: key.uppercased(), data: textBlocksExtracted[key])
+            return cell
+        }
+        return UITableViewCell()
+    }
+
+}
+
+extension CardScannerResultViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
 }

@@ -9,9 +9,9 @@
 import UIKit
 
 class CardListViewController: UIViewController {
-    private let viewModel = HistoryViewModel()
-    private var history: [HistoryObject]?
-    private var selectedItem: HistoryObject!
+    private let viewModel = CardViewModel()
+    private var card: [CardModel]?
+    private var selectedItem: CardModel!
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
@@ -22,15 +22,15 @@ class CardListViewController: UIViewController {
         super.viewWillAppear(animated)
         
         initiateView()
-        loadHistory()
+        loadCard()
     }
     
     private func initiateView() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    private func loadHistory() {
-        history = viewModel.getHistory()
+    private func loadCard() {
+        card = viewModel.getCard()
         table.reloadData()
     }
     
@@ -47,12 +47,12 @@ class CardListViewController: UIViewController {
 
 extension CardListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return history?.count ?? 0
+        return card?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "history_cell") as? CardTableViewCell else { return UITableViewCell() }
-        cell.setup(history?[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "card_cell") as? CardTableViewCell else { return UITableViewCell() }
+        cell.setup(card?[indexPath.row])
         
         return cell
     }
@@ -62,7 +62,7 @@ extension CardListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        self.selectedItem = history?[indexPath.row]
+        self.selectedItem = card?[indexPath.row]
         performSegue(withIdentifier: "show", sender: self)
     }
 }

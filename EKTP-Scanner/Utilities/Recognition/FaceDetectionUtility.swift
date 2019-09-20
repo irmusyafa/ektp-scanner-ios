@@ -14,7 +14,7 @@ protocol FaceDetectionUtilityDelegate {
     func didDetectFaceImage(_ image: CIImage, at rect: CGRect)
 }
 
-class FaceDetectionUtility: DetectionUtility {
+class FaceDetectionUtility: BaseDetectionUtility {
     public var delegate: FaceDetectionUtilityDelegate?
     private var faceQueue: DispatchQueue!
     private lazy var facesRequest: VNDetectFaceRectanglesRequest = {

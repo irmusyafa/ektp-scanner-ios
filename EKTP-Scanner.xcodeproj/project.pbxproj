@@ -21,10 +21,10 @@
 		EC458B212332579300F2FAA4 /* CardDetectionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B202332579300F2FAA4 /* CardDetectionUtility.swift */; };
 		EC458B23233257B100F2FAA4 /* FaceDetectionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B22233257B100F2FAA4 /* FaceDetectionUtility.swift */; };
 		EC458B25233257D400F2FAA4 /* OCRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B24233257D400F2FAA4 /* OCRUtility.swift */; };
-		EC458B27233257E800F2FAA4 /* DetectionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B26233257E800F2FAA4 /* DetectionUtility.swift */; };
-		EC458B2B233258A600F2FAA4 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2A233258A600F2FAA4 /* HistoryModel.swift */; };
-		EC458B2D2332596E00F2FAA4 /* HistoryDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2C2332596E00F2FAA4 /* HistoryDatabase.swift */; };
-		EC458B2F233259CE00F2FAA4 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2E233259CE00F2FAA4 /* HistoryViewModel.swift */; };
+		EC458B27233257E800F2FAA4 /* BaseDetectionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B26233257E800F2FAA4 /* BaseDetectionUtility.swift */; };
+		EC458B2B233258A600F2FAA4 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2A233258A600F2FAA4 /* CardModel.swift */; };
+		EC458B2D2332596E00F2FAA4 /* CardDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2C2332596E00F2FAA4 /* CardDatabase.swift */; };
+		EC458B2F233259CE00F2FAA4 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B2E233259CE00F2FAA4 /* CardViewModel.swift */; };
 		EC458B3123325B6600F2FAA4 /* CardScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B3023325B6600F2FAA4 /* CardScannerViewController.swift */; };
 		EC458B3323325BA400F2FAA4 /* StatementLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B3223325BA400F2FAA4 /* StatementLabel.swift */; };
 		EC458B3523325BDA00F2FAA4 /* CardScannerErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC458B3423325BDA00F2FAA4 /* CardScannerErrorViewController.swift */; };
@@ -70,10 +70,10 @@
 		EC458B202332579300F2FAA4 /* CardDetectionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetectionUtility.swift; sourceTree = "<group>"; };
 		EC458B22233257B100F2FAA4 /* FaceDetectionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionUtility.swift; sourceTree = "<group>"; };
 		EC458B24233257D400F2FAA4 /* OCRUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRUtility.swift; sourceTree = "<group>"; };
-		EC458B26233257E800F2FAA4 /* DetectionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionUtility.swift; sourceTree = "<group>"; };
-		EC458B2A233258A600F2FAA4 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
-		EC458B2C2332596E00F2FAA4 /* HistoryDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDatabase.swift; sourceTree = "<group>"; };
-		EC458B2E233259CE00F2FAA4 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		EC458B26233257E800F2FAA4 /* BaseDetectionUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDetectionUtility.swift; sourceTree = "<group>"; };
+		EC458B2A233258A600F2FAA4 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		EC458B2C2332596E00F2FAA4 /* CardDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDatabase.swift; sourceTree = "<group>"; };
+		EC458B2E233259CE00F2FAA4 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		EC458B3023325B6600F2FAA4 /* CardScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerViewController.swift; sourceTree = "<group>"; };
 		EC458B3223325BA400F2FAA4 /* StatementLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementLabel.swift; sourceTree = "<group>"; };
 		EC458B3423325BDA00F2FAA4 /* CardScannerErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScannerErrorViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +124,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC0D43932333CA9B00F8D48A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC458B2E233259CE00F2FAA4 /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EC458ADD233236FB00F2FAA4 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +162,7 @@
 				EC458B0E2332378200F2FAA4 /* Resources */,
 				EC458B0C2332377300F2FAA4 /* Screen */,
 				EC458B0F2332378D00F2FAA4 /* Utilities */,
+				EC0D43932333CA9B00F8D48A /* ViewModel */,
 				EC458B10233237E700F2FAA4 /* XIB */,
 			);
 			path = "EKTP-Scanner";
@@ -182,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				EC458AF0233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld */,
-				EC458B2C2332596E00F2FAA4 /* HistoryDatabase.swift */,
+				EC458B2C2332596E00F2FAA4 /* CardDatabase.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -220,8 +229,8 @@
 		EC458B11233237FC00F2FAA4 /* CardList */ = {
 			isa = PBXGroup;
 			children = (
-				EC458B4223325D4F00F2FAA4 /* CardTableViewCell.swift */,
 				EC458B4023325D2C00F2FAA4 /* CardListViewController.swift */,
+				EC458B4223325D4F00F2FAA4 /* CardTableViewCell.swift */,
 			);
 			path = CardList;
 			sourceTree = "<group>";
@@ -238,9 +247,9 @@
 		EC458B1923323B8F00F2FAA4 /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				EC49FA992332982100520CA6 /* CardDetailDataTableViewCell.swift */,
 				EC458B3623325C0F00F2FAA4 /* CardDetailViewController.swift */,
 				EC458B3823325C3100F2FAA4 /* FullImageTableViewCell.swift */,
-				EC49FA992332982100520CA6 /* CardDetailDataTableViewCell.swift */,
 			);
 			path = CardDetail;
 			sourceTree = "<group>";
@@ -248,10 +257,10 @@
 		EC458B28233257F800F2FAA4 /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
-				EC458B24233257D400F2FAA4 /* OCRUtility.swift */,
+				EC458B26233257E800F2FAA4 /* BaseDetectionUtility.swift */,
 				EC458B202332579300F2FAA4 /* CardDetectionUtility.swift */,
-				EC458B26233257E800F2FAA4 /* DetectionUtility.swift */,
 				EC458B22233257B100F2FAA4 /* FaceDetectionUtility.swift */,
+				EC458B24233257D400F2FAA4 /* OCRUtility.swift */,
 			);
 			path = Recognition;
 			sourceTree = "<group>";
@@ -259,8 +268,7 @@
 		EC458B292332588900F2FAA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC458B2A233258A600F2FAA4 /* HistoryModel.swift */,
-				EC458B2E233259CE00F2FAA4 /* HistoryViewModel.swift */,
+				EC458B2A233258A600F2FAA4 /* CardModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,13 +469,13 @@
 				EC458B1F2332576E00F2FAA4 /* Utilities.swift in Sources */,
 				EC458B3723325C0F00F2FAA4 /* CardDetailViewController.swift in Sources */,
 				EC458AF2233236FB00F2FAA4 /* EKTP_Scanner.xcdatamodeld in Sources */,
-				EC458B2D2332596E00F2FAA4 /* HistoryDatabase.swift in Sources */,
+				EC458B2D2332596E00F2FAA4 /* CardDatabase.swift in Sources */,
 				EC458B3923325C3100F2FAA4 /* FullImageTableViewCell.swift in Sources */,
 				EC458B4123325D2C00F2FAA4 /* CardListViewController.swift in Sources */,
 				EC458B4323325D4F00F2FAA4 /* CardTableViewCell.swift in Sources */,
 				EC458B212332579300F2FAA4 /* CardDetectionUtility.swift in Sources */,
 				EC458AEA233236FB00F2FAA4 /* AppDelegate.swift in Sources */,
-				EC458B2B233258A600F2FAA4 /* HistoryModel.swift in Sources */,
+				EC458B2B233258A600F2FAA4 /* CardModel.swift in Sources */,
 				EC458B25233257D400F2FAA4 /* OCRUtility.swift in Sources */,
 				EC458B3F23325CF800F2FAA4 /* CardScannerResultViewController.swift in Sources */,
 				EC458B1D2332574500F2FAA4 /* ImageUtils.swift in Sources */,
@@ -477,9 +485,9 @@
 				EC458B1723323B0500F2FAA4 /* DatabaseInstance.swift in Sources */,
 				EC49FA9A2332982100520CA6 /* CardDetailDataTableViewCell.swift in Sources */,
 				EC458B4623325D7E00F2FAA4 /* RoundedButton.swift in Sources */,
-				EC458B27233257E800F2FAA4 /* DetectionUtility.swift in Sources */,
+				EC458B27233257E800F2FAA4 /* BaseDetectionUtility.swift in Sources */,
 				EC458B3D23325CA200F2FAA4 /* ScanView.swift in Sources */,
-				EC458B2F233259CE00F2FAA4 /* HistoryViewModel.swift in Sources */,
+				EC458B2F233259CE00F2FAA4 /* CardViewModel.swift in Sources */,
 				EC458B23233257B100F2FAA4 /* FaceDetectionUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

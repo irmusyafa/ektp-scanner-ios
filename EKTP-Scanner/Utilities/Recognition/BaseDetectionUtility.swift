@@ -1,5 +1,5 @@
 //
-//  DetectionUtility.swift
+//  BaseDetectionUtility.swift
 //  EKTP-Scanner
 //
 //  Created by Irfan Rafii Musyafa on 18/09/19.
@@ -10,7 +10,7 @@ import UIKit
 import CoreML
 import Vision
 
-class DetectionUtility: NSObject {
+class BaseDetectionUtility: NSObject {
     internal var inputImage: CIImage!
     internal let queueTarget = DispatchQueue(label: "detection_queue", qos: .background, attributes: .concurrent, autoreleaseFrequency: .workItem)
     
