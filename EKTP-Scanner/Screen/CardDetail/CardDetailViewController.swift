@@ -66,6 +66,6 @@ extension CardDetailViewController: UITableViewDataSource {
 
 extension CardDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (indexPath.row == 0) ? tableView.frame.size.width * 2 / 3 : 90
+        return (indexPath.row == 0) ? tableView.frame.size.width * 2 / 3 : 104
     }
 }

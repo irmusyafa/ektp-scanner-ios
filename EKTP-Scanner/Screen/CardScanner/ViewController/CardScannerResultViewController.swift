@@ -109,9 +109,3 @@ extension CardScannerResultViewController: UITableViewDataSource {
     }
 
 }
-
-extension CardScannerResultViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
-    }
-}

@@ -18,5 +18,7 @@ class FullImageTableViewCell: UITableViewCell {
     
     public func setup(_ item: CardModel) {
         if let card = item.image { self.userCard.image = card }
+        userCard.layer.cornerRadius = 16
+        userCard.layer.masksToBounds = true
     }
 }
