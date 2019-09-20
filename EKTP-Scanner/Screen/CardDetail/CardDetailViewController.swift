@@ -44,7 +44,7 @@ extension CardDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionHeaders.count
+        return sectionHeaders.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,8 +55,8 @@ extension CardDetailViewController: UITableViewDataSource {
         }
         if indexPath.row > 0,
             let cell = tableView.dequeueReusableCell(withIdentifier: "info_cell") as? CardDetailDataTableViewCell {
-            let title = sectionHeaders[indexPath.row].uppercased()
-            let data = extractedItems[indexPath.row]?.uppercased()
+            let title = sectionHeaders[indexPath.row - 1].uppercased()
+            let data = extractedItems[indexPath.row - 1]?.uppercased()
             cell.setup(title: title, data: data)
             return cell
         }
