@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4B5F2335CEAE7A6A7F1655C /* Pods_EKTP_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */; };
+		C280C224B1EB65CB9F8B51CE /* libPods-EKTP-Scanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BDF404BEF212901FEFA57 /* libPods-EKTP-Scanner.a */; };
 		EC197618233488B500A80386 /* IdentityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC197617233488B500A80386 /* IdentityModel.swift */; };
 		EC19761A23348A9000A80386 /* CustomExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19761923348A9000A80386 /* CustomExtension.swift */; };
 		EC19761C23348B6600A80386 /* CardManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19761B23348B6600A80386 /* CardManagedObject.swift */; };
@@ -57,6 +57,7 @@
 		09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EKTP_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DE6B4A310F63F53E26C0FA /* Pods-EKTP-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.debug.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		781BBDB074EC23FF050D296C /* Pods-EKTP-Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EKTP-Scanner.release.xcconfig"; path = "Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner.release.xcconfig"; sourceTree = "<group>"; };
+		D89BDF404BEF212901FEFA57 /* libPods-EKTP-Scanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EKTP-Scanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC197617233488B500A80386 /* IdentityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityModel.swift; sourceTree = "<group>"; };
 		EC19761923348A9000A80386 /* CustomExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtension.swift; sourceTree = "<group>"; };
 		EC19761B23348B6600A80386 /* CardManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardManagedObject.swift; sourceTree = "<group>"; };
@@ -94,6 +95,45 @@
 		EC458B4523325D7E00F2FAA4 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		EC49FA992332982100520CA6 /* CardDetailDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailDataTableViewCell.swift; sourceTree = "<group>"; };
 		ECBAB2D12334E37200FB84FF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		ECC2E778241A5A630022AF79 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E77A241A5A630022AF79 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E77C241A5A630022AF79 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E77E241A5A630022AF79 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E780241A5A630022AF79 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E782241A5A630022AF79 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E784241A5A630022AF79 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E786241A5A630022AF79 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E788241A5A630022AF79 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E78A241A5A630022AF79 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E78C241A5A630022AF79 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E78E241A5A630022AF79 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E790241A5A630022AF79 /* protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E792241A5CC40022AF79 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E793241A5CC40022AF79 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E794241A5CC40022AF79 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E795241A5CC40022AF79 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E796241A5CC40022AF79 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E797241A5CC40022AF79 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E798241A5CC40022AF79 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E799241A5CC40022AF79 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79A241A5CC40022AF79 /* GoogleMVTextDetectorResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = GoogleMVTextDetectorResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79B241A5CC40022AF79 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79C241A5CC40022AF79 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79D241A5CC40022AF79 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79E241A5CC40022AF79 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC2E79F241A5CC40022AF79 /* protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07975241A57FA0016D631 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07977241A58360016D631 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07979241A58360016D631 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD0797B241A58360016D631 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD0797D241A58360016D631 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleAPIClientForREST.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD0797F241A58360016D631 /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07981241A58360016D631 /* GoogleDataTransportCCTSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransportCCTSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07983241A58360016D631 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07985241A58360016D631 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07987241A58360016D631 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD07989241A58B40016D631 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD0798B241A58B40016D631 /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4B5F2335CEAE7A6A7F1655C /* Pods_EKTP_Scanner.framework in Frameworks */,
+				C280C224B1EB65CB9F8B51CE /* libPods-EKTP-Scanner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +167,46 @@
 		CC24AE89C24596DC78691A1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */,
+				ECC2E792241A5CC40022AF79 /* FBLPromises.framework */,
+				ECC2E793241A5CC40022AF79 /* FirebaseCore.framework */,
+				ECC2E794241A5CC40022AF79 /* FirebaseCoreDiagnostics.framework */,
+				ECC2E795241A5CC40022AF79 /* FirebaseInstallations.framework */,
+				ECC2E796241A5CC40022AF79 /* FirebaseInstanceID.framework */,
+				ECC2E797241A5CC40022AF79 /* GoogleAPIClientForREST.framework */,
+				ECC2E798241A5CC40022AF79 /* GoogleDataTransport.framework */,
+				ECC2E799241A5CC40022AF79 /* GoogleDataTransportCCTSupport.framework */,
+				ECC2E79A241A5CC40022AF79 /* GoogleMVTextDetectorResources.bundle */,
+				ECC2E79B241A5CC40022AF79 /* GoogleToolboxForMac.framework */,
+				ECC2E79C241A5CC40022AF79 /* GoogleUtilities.framework */,
+				ECC2E79D241A5CC40022AF79 /* GTMSessionFetcher.framework */,
+				ECC2E79E241A5CC40022AF79 /* nanopb.framework */,
+				ECC2E79F241A5CC40022AF79 /* protobuf.framework */,
+				ECC2E778241A5A630022AF79 /* FBLPromises.framework */,
+				ECC2E77A241A5A630022AF79 /* FirebaseCore.framework */,
+				ECC2E77C241A5A630022AF79 /* FirebaseCoreDiagnostics.framework */,
+				ECC2E77E241A5A630022AF79 /* FirebaseInstallations.framework */,
+				ECC2E780241A5A630022AF79 /* FirebaseInstanceID.framework */,
+				ECC2E782241A5A630022AF79 /* GoogleAPIClientForREST.framework */,
+				ECC2E784241A5A630022AF79 /* GoogleDataTransport.framework */,
+				ECC2E786241A5A630022AF79 /* GoogleDataTransportCCTSupport.framework */,
+				ECC2E788241A5A630022AF79 /* GoogleToolboxForMac.framework */,
+				ECC2E78A241A5A630022AF79 /* GoogleUtilities.framework */,
+				ECC2E78C241A5A630022AF79 /* GTMSessionFetcher.framework */,
+				ECC2E78E241A5A630022AF79 /* nanopb.framework */,
+				ECC2E790241A5A630022AF79 /* protobuf.framework */,
+				ECD07989241A58B40016D631 /* nanopb.framework */,
+				ECD0798B241A58B40016D631 /* Protobuf.framework */,
+				ECD07977241A58360016D631 /* FirebaseCore.framework */,
+				ECD07979241A58360016D631 /* FirebaseCoreDiagnostics.framework */,
+				ECD0797B241A58360016D631 /* FirebaseInstanceID.framework */,
+				ECD0797D241A58360016D631 /* GoogleAPIClientForREST.framework */,
+				ECD0797F241A58360016D631 /* GoogleDataTransport.framework */,
+				ECD07981241A58360016D631 /* GoogleDataTransportCCTSupport.framework */,
+				ECD07983241A58360016D631 /* GoogleToolboxForMac.framework */,
+				ECD07985241A58360016D631 /* GoogleUtilities.framework */,
+				ECD07987241A58360016D631 /* GTMSessionFetcher.framework */,
+				ECD07975241A57FA0016D631 /* GTMSessionFetcher.framework */,
+				D89BDF404BEF212901FEFA57 /* libPods-EKTP-Scanner.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +227,7 @@
 				EC458AE7233236FB00F2FAA4 /* Products */,
 				0105E3B33F3EE73EE0CDC3C0 /* Pods */,
 				CC24AE89C24596DC78691A1A /* Frameworks */,
+				EC9645B4241A6BCF001671EA /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +393,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EC9645B4241A6BCF001671EA /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				09B1CCB94A3948BAC251FAAB /* Pods_EKTP_Scanner.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,7 +412,6 @@
 				EC458AE2233236FB00F2FAA4 /* Sources */,
 				EC458AE3233236FB00F2FAA4 /* Frameworks */,
 				EC458AE4233236FB00F2FAA4 /* Resources */,
-				F8711C07D2A67EF16D9A5AFF /* [CP] Embed Pods Frameworks */,
 				6FE234C74C3C8F8D09D9D73A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -451,23 +538,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F8711C07D2A67EF16D9A5AFF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EKTP-Scanner/Pods-EKTP-Scanner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

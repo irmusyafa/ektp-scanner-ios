@@ -1,10 +1,9 @@
 
 target 'EKTP-Scanner' do
-  use_frameworks!
 
-  pod 'Firebase/Core'
-  pod 'Firebase/MLVision'
-  pod 'Firebase/MLVisionTextModel'
+  pod 'Firebase/Core',:modular_headers => true
+  pod 'Firebase/MLVision',:modular_headers => true
+  pod 'Firebase/MLVisionTextModel',:modular_headers => true
 
 
 end
